@@ -1,0 +1,9 @@
+{
+  "name": "giga-builders",
+  "version": "1.0.0",
+  "description": "Enhanced Discord Builders Library that can assist you in creating your discord bot without having to deal with objects.",
+  "main": "index.js",
+  "repository": "https://github.com/gtjman/giga-builder.git",
+  "author": "gtjman <92214770+gtjman@users.noreply.github.com>",
+  "license": "MIT"
+}
