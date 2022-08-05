@@ -1,4 +1,3 @@
-import { Options } from "discord.js";
 import { ApplicationCommandOptionType } from ".";
 
 export class ChatInputCommandBuilder {
