@@ -5,5 +5,7 @@ export enum ErrorCodes {
     EmbedAuthorNameLength = "Embed author name max length is 256",
     EmbedTitleMaxLength = "Embed title max length is 256",
     EmbedDescriptionMaxLength = "Embed description max length in 4096",
-    EmbedFooterTextMaxLength = "Embed footer text max length is 2048"
+    EmbedFooterTextMaxLength = "Embed footer text max length is 2048",
+    NumberOptionNegativeNumber = "You cannot use negative numbers",
+    NumberOptionIsNotInteger = "The value must me a integer"
 }
