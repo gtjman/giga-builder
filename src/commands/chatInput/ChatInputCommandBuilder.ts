@@ -34,7 +34,7 @@ export class ChatInputCommandBuilder {
      * @param {string} name - Name of the command, 1-32 characters
      */
 
-    public setName(name: string) {
+    setName(name: string) {
         let ChatInputApplicationCommandNameRegex = new RegExp(/^[-_\p{L}\p{N}\p{sc=Deva}\p{sc=Thai}]{1,32}$/gi);
         let test = ChatInputApplicationCommandNameRegex.test(name);
         if (test) {
@@ -48,7 +48,7 @@ export class ChatInputCommandBuilder {
      * @param {string} description - Description of the command, 1-100 characters.
      */
 
-    public setDescription(description: string) {
+    setDescription(description: string) {
         if (description.length > 100 || description.length < 1) {
             throw new Error(ErrorCodes.ChatInputApplicationCommandDescriptionMaxLength);
         } else {
@@ -62,7 +62,7 @@ export class ChatInputCommandBuilder {
      * @param {boolean} mode - Indicates whether the command is available in DMs with the app, only for globally-scoped commands. By default, commands are visible.
      */
 
-    public setDmPermission(mode: boolean) {
+    setDmPermission(mode: boolean) {
         this.dm_permission = mode;
         return this;
     };
@@ -72,7 +72,7 @@ export class ChatInputCommandBuilder {
      * @param {boolean} mode - Not recommended for use as field will soon be deprecated. Indicates whether the command is enabled by default when the app is added to a guild, defaults to true
      */
 
-    public setDefaultPermission(mode: boolean) {
+    setDefaultPermission(mode: boolean) {
         this.default_permission = mode;
         return this;
     };
@@ -82,7 +82,7 @@ export class ChatInputCommandBuilder {
      * @param {boolean} mode
      */
 
-    public setDefaultMemberPermissions(permissions: string) {
+    setDefaultMemberPermissions(permissions: string) {
         this.default_member_permissions = permissions;
         return this;
     };
@@ -92,7 +92,7 @@ export class ChatInputCommandBuilder {
  * @param {ApplicationCommandOptionType} options - Parameters for the command, max of 25
  */
 
-    public setOptions(options: ApplicationCommandOptionData[]) {
+    setOptions(options: ApplicationCommandOptionData[]) {
         if (options.length > 25) throw new Error(ErrorCodes.ChatInputApplicationCommandOptionsMaxLength);
         this.options = options;
         return this;
