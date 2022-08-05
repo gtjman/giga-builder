@@ -2,7 +2,7 @@ import {
   ApplicationCommandOptionData,
   ChatInputApplicationCommandData,
 } from ".";
-// import { ErrorCodes } from "../../errors";
+import { ErrorCodes } from "../../errors";
 
 export class ChatInputCommandBuilder {
   /**
@@ -41,13 +41,11 @@ export class ChatInputCommandBuilder {
     this.default_permission = data?.default_permission;
     this.default_member_permissions = data?.default_member_permissions;
   }
-
   /**
    * Set the name of the command
    * @param {string} name - Name of the command, 1-32 characters
    */
-
-  public setName(name: string) {
+  setName(name: string) {
     let ChatInputApplicationCommandNameRegex = new RegExp(
       /^[-_\p{L}\p{N}\p{sc=Deva}\p{sc=Thai}]{1,32}$/gi
     );
@@ -62,8 +60,7 @@ export class ChatInputCommandBuilder {
    * Set the description of the command
    * @param {string} description - Description of the command, 1-100 characters.
    */
-
-  public setDescription(description: string) {
+  setDescription(description: string) {
     if (description.length > 100 || description.length < 1) {
       throw new Error(
         ErrorCodes.ChatInputApplicationCommandDescriptionMaxLength
@@ -78,8 +75,7 @@ export class ChatInputCommandBuilder {
    * Set the dm_permission of the command
    * @param {boolean} mode - Indicates whether the command is available in DMs with the app, only for globally-scoped commands. By default, commands are visible.
    */
-
-  public setDmPermission(mode: boolean) {
+  setDmPermission(mode: boolean) {
     this.dm_permission = mode;
     return this;
   }
@@ -88,8 +84,7 @@ export class ChatInputCommandBuilder {
    * Set the default_permission of the command
    * @param {boolean} mode - Not recommended for use as field will soon be deprecated. Indicates whether the command is enabled by default when the app is added to a guild, defaults to true
    */
-
-  public setDefaultPermission(mode: boolean) {
+  setDefaultPermission(mode: boolean) {
     this.default_permission = mode;
     return this;
   }
@@ -98,8 +93,7 @@ export class ChatInputCommandBuilder {
    * Set the default_member_permissions of the command
    * @param {boolean} mode
    */
-
-  public setDefaultMemberPermissions(permissions: string) {
+  setDefaultMemberPermissions(permissions: string) {
     this.default_member_permissions = permissions;
     return this;
   }
@@ -108,8 +102,7 @@ export class ChatInputCommandBuilder {
    * Set the options of the command
    * @param {ApplicationCommandOptionType} options - Parameters for the command, max of 25
    */
-
-  public setOptions(options: ApplicationCommandOptionData[]) {
+  setOptions(options: ApplicationCommandOptionData[]) {
     if (options.length > 25)
       throw new Error(ErrorCodes.ChatInputApplicationCommandOptionsMaxLength);
     this.options = options;
