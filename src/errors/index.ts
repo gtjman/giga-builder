@@ -9,6 +9,5 @@ export enum ErrorCodes {
     EmbedFooterTextMaxLength = "Embed footer text max length is 2048",
     NumberOptionNegativeNumber = "You cannot use negative numbers",
     NumberOptionIsNotInteger = "The value must me a integer",
-    ChatInputApplicationCommandOptionDescriptionMaxLength = "Option description max length is 100 and min length is 1",
-    InvalidApplicationCommandOptionName = "Invalid application command option name, option name includes invalid characters or option name length is less than 0 or more than 100"
+    ChatInputApplicationCommandOptionDescriptionMaxLength = "Option description max length is 100 and min length is 1"
 }
