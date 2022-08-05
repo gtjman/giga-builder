@@ -8,5 +8,6 @@ export enum ErrorCodes {
     EmbedDescriptionMaxLength = "Embed description max length in 4096",
     EmbedFooterTextMaxLength = "Embed footer text max length is 2048",
     NumberOptionNegativeNumber = "You cannot use negative numbers",
-    NumberOptionIsNotInteger = "The value must me a integer"
+    NumberOptionIsNotInteger = "The value must me a integer",
+    ChatInputApplicationCommandOptionDescriptionMaxLength = "Option description max length is 100 and min length is 1"
 }
