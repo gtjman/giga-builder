@@ -9,62 +9,62 @@ import {
 } from ".";
 
 export default class Embed implements EmbedData {
-  private readonly type = "rich";
+  readonly type = "rich";
 
   /**
    * the author data of the embed
    */
-  private author?: EmbedAuthorData;
+  author?: EmbedAuthorData;
 
   /**
    * title of the embed
    */
-  private title?: string;
+  title?: string;
 
   /**
    * description of the embed
    */
-  private description?: string;
+  description?: string;
 
   /**
    * url of the embed
    */
-  private url?: string;
+  url?: string;
 
   /**
    * the color code of the embed
    */
-  private color?: number;
+  color?: number;
 
   /**
    * the footer data of the embed
    */
-  private footer?: EmbedFooterData;
+  footer?: EmbedFooterData;
 
   /**
    * the thumbnail data of the embed
    */
-  private thumbnail?: EmbedThumbnailData;
+  thumbnail?: EmbedThumbnailData;
 
   /**
    * timestamp of the element in ISO8601 format
    */
-  private timestamp?: string;
+  timestamp?: string;
 
   /**
    * the image data of the embed
    */
-  private image?: EmbedImageData;
+  image?: EmbedImageData;
 
   /**
    * the video data of the embed
    */
-  private video?: EmbedVideoData;
+  video?: EmbedVideoData;
 
   /**
    * the fields of the embed
    */
-  private fields?: EmbedFieldData[];
+  fields?: EmbedFieldData[];
 
   /**
    * @param data - API Embed Object
